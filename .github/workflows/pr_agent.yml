@@ -21,11 +21,3 @@ jobs:
           CONFIG.MODEL_TURBO: llama3-70b-8192
           CONFIG.FALLBACK_MODELS: 'groq/llama3-70b-8192'
           GROQ.KEY: ${{ secrets.GROQ_KEY }}
-          PR_REVIEWER.EXTRA_INSTRUCTIONS: >- 
-            回答は日本語に変換してください。
-          PR_DESCRIPTION.EXTRA_INSTRUCTIONS: >- 
-            回答は日本語に変換してください。
-            タイトルは feat: 、chore: 、test: 、fix: 、ci: 、docs: などの
-            commitlint パターンの接頭辞を含む必要があります。
-          PR_CODE_SUGGESTIONS.EXTRA_INSTRUCTIONS: >-
-            回答は日本語に変換してください。
