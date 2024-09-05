@@ -24,8 +24,8 @@ jobs:
           PR_REVIEWER.EXTRA_INSTRUCTIONS: >- 
             Chuyển câu trả lời sang tiếng Việt.
           PR_DESCRIPTION.EXTRA_INSTRUCTIONS: >- 
-            Chuyển câu trả lời sang tiếng Việt.
-            Tiêu đề phải bao gồm một tiền tố từ mẫu commitlint như feat:, chore:, test:, fix:, ci:, hoặc docs:. và tiêu đề là tiếng anh ngắn gọn viết thường toàn bộ.
+            Tiêu đề phải bao gồm một tiền tố từ mẫu commitlint như feat:, chore:, test:, fix:, ci:, hoặc docs:... 
+            Tiêu đề phải là tiếng anh ngắn gọn và viết thường toàn bộ câu.
           PR_CODE_SUGGESTIONS.EXTRA_INSTRUCTIONS: >-
             Chuyển câu trả lời sang tiếng Việt.
           PR_DESCRIPTION.GENERATE_AI_TITLE: true
