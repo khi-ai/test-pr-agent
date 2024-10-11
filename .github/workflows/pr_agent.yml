@@ -2,6 +2,7 @@ on:
   pull_request:
     types: [opened, reopened, ready_for_review]
   issue_comment:
+
 jobs:
   pr_agent_job:
     if: ${{ github.event.sender.type != 'Bot' }}
@@ -17,13 +18,14 @@ jobs:
         uses: Codium-ai/pr-agent@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CONFIG.MODEL: llama-3.1-70b-versatile
-          CONFIG.MODEL_TURBO: llama-3.1-70b-versatile
-          CONFIG.FALLBACK_MODELS: 'groq/llama-3.1-70b-versatile'
+          CONFIG.MODEL: groq/llama-3.1-70b-versatile
+          CONFIG.MODEL_TURBO: groq/llama-3.1-70b-versatile
+          CONFIG.FALLBACK_MODELS: "groq/llama-3.1-8b-instant"
+          CONFIG.CUSTOM_MODEL_MAX_TOKENS: 14400
           GROQ.KEY: ${{ secrets.GROQ_KEY }}
-          PR_REVIEWER.EXTRA_INSTRUCTIONS: >- 
+          PR_REVIEWER.EXTRA_INSTRUCTIONS: >-
             Chuyển câu trả lời sang tiếng Việt.
-          PR_DESCRIPTION.EXTRA_INSTRUCTIONS: >- 
+          PR_DESCRIPTION.EXTRA_INSTRUCTIONS: >-
             Tiêu đề phải bao gồm một tiền tố từ mẫu commitlint như feat:, chore:, test:, fix:, ci:, hoặc docs:... 
             Tiêu đề phải là tiếng anh ngắn gọn và viết thường toàn bộ câu.
           PR_CODE_SUGGESTIONS.EXTRA_INSTRUCTIONS: >-
